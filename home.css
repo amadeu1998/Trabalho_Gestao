@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+
+/* Estilo para o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do header com destaque em laranja */
+header {
+    background-color: #f57c00; /* Cor laranja para o fundo */
+    color: #fff; /* Cor do texto em branco */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o header */
+    position: relative;
+}
+
+/* Estilo para o título do header */
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no texto para destacar */
+}
+
+/* Estilo do parágrafo do header */
+header p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para destacar as palavras-chave no h1 */
+header h1 span {
+    color: #ffeb3b; /* Cor amarela para as palavras destacadas */
+}
+
+/* Estilo para destacar as palavras-chave no parágrafo */
+header p span {
+    font-weight: bold;
+    color: #ffeb3b; /* Mesma cor amarela para consistência */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+}
+
+/* Estilo do container principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das marcas */
+.brand {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Estilo das listas de carros */
+.car-list {
+    margin-top: 20px;
+}
+
+.car-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.car-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.car-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+/* Estilo para listas de qualidades e defeitos */
+.qualities, .defects {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.qualities li, .defects li {
+    margin-bottom: 5px;
+}
+
+/* Estilo para o texto dos títulos */
+strong {
+    font-weight: bold;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .car-item {
+        padding: 15px;
+    }
+
+    .car-item h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* Estilos do menu de navegação */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav .menu a:hover {
+    color: #ffa500; /* Cor para o efeito hover */
+}
+
+/* Estilo da seção de destaques */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo neutra */
+}
+
+.highlight-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px); /* Elevação leve ao passar o mouse */
+}
+
+.highlight-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.highlight-item h3 {
+    color: #ff6600; /* Laranja para título */
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.highlight-item p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-menu li {
+    display: inline;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-menu a:hover {
+    color: #ffd700; /* Cor de destaque para o hover */
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    margin: 20px 0;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff6600; /* Linha decorativa embaixo do título */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right; /* Alinha a imagem à direita */
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra na imagem para dar profundidade */
+}
+
+/* Estilo Responsivo para telas menores */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+
+    .about-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .about-image img {
+        width: 90%;
+    }
+}
+
+/* Estilo para a seção sobre as Marcas */
+.about-brands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.about-brands-content {
+    flex: 1;
+}
+
+.about-brands-content h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff6600;
+    padding-bottom: 5px;
+}
+
+.about-brands-content p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-brands-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-brands-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .about-brands {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-brands-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .about-brands-image img {
+        width: 90%;
+    }
+}
+
+/* Estilo para a seção: Qual carro devo comprar? */
+.car-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.car-choice-content {
+    flex: 1;
+}
+
+.car-choice-content h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff6600;
+    padding-bottom: 5px;
+}
+
+.car-choice-content p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.8;
+}
+
+.car-choice-tips {
+    margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.car-choice-tips li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.car-choice-image {
+    flex: 1;
+    text-align: right;
+}
+
+.car-choice-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para a seção: Qual carro devo comprar? */
+@media (max-width: 768px) {
+    .car-choice {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .car-choice-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .car-choice-image img {
+        width: 90%;
+    }
+}
+
+.top-cars {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.top-cars h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.top-cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: #fff;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.car-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.car-card p {
+    font-size: 0.9em;
+    padding: 0 10px 10px;
+    color: #555;
+}
+
+.brand-history {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.brand-history h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.brand-history-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.brand-item {
+    flex: 1 1 calc(33% - 1rem);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-item img {
+    max-width: 80px;
+    margin-bottom: 1rem;
+}
+
+.brand-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.brand-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+

@@ -1,0 +1,150 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #f57c00; /* Laranja Fiat */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o header */
+    position: relative;
+}
+
+/* Estilo para o título do header */
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no texto para destacar */
+}
+
+/* Estilo do parágrafo do header */
+header p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da seção "Confiabilidade" */
+.about-fiat {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+}
+
+.about-fiat h2 {
+    font-size: 2em;
+    color: #f57c00; /* Laranja Fiat */
+    border-bottom: 3px solid #f57c00;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.about-fiat p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Estilo dos modelos */
+.models {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.model {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.model-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.model-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.model-content {
+    flex: 2;
+}
+
+.model h3 {
+    font-size: 1.8em;
+    color: #f57c00; /* Laranja Fiat */
+    margin-bottom: 15px;
+}
+
+.model p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav .menu a:hover {
+    color: #f57c00; /* Cor laranja para o efeito hover */
+}

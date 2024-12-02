@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog de Comentários</title>
+</head>
+<body>
+    <header>
+        <h1>Blog de Comentários</h1>
+        <p>Compartilhe suas experiências com diferentes marcas e modelos de veículos.</p>
+
+        <br>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="Toyota/toyota.html">Toyota</a></li>
+                <li><a href="Honda/honda.html">Honda</a></li>
+                <li><a href="Peugeot/peugeot.html">Peugeot</a></li>
+                <li><a href="Fiat/fiat.html">Fiat</a></li>
+                <li><a href="Kia/kia.html">Kia</a></li>
+                <li><a href="Ford/ford.html">Ford</a></li>
+                <li><a href="Ford/ford.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="comment-form">
+            <h2>Deixe seu Comentário</h2>
+            <form id="commentForm">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                
+                <label for="brand">Marca do Veículo:</label>
+                <select id="brand" name="brand" required>
+                    <option value="">Selecione uma marca</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Ford">Ford</option>
+                </select>
+                
+                <label for="model">Modelo do Veículo:</label>
+                <input type="text" id="model" name="model" placeholder="Digite o modelo do veículo" required>
+                
+                <label for="comment">Comentário:</label>
+                <textarea id="comment" name="comment" rows="5" placeholder="Compartilhe sua experiência..." required></textarea>
+                
+                <button type="submit">Enviar Comentário</button>
+            </form>
+        </section>
+
+        <section class="comments-display">
+            <h2>Comentários dos Clientes</h2>
+            <div id="commentsContainer">
+                <p>Carregando comentários...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cris Motors. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const API_URL = 'http://localhost:3000/comments';
+
+        async function fetchComments() {
+            try {
+                const response = await fetch(API_URL);
+                const comments = await response.json();
+                const container = document.getElementById('commentsContainer');
+                container.innerHTML = '';
+
+                comments.forEach(comment => {
+                    const commentItem = document.createElement('div');
+                    commentItem.classList.add('comment-item');
+                    commentItem.innerHTML = `
+                        <h3>${comment.name} comentou sobre ${comment.brand} ${comment.model}:</h3>
+                        <p>${comment.comment}</p>
+                    `;
+                    container.appendChild(commentItem);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar comentários:', error);
+            }
+        }
+
+        document.getElementById('commentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const brand = document.getElementById('brand').value;
+            const model = document.getElementById('model').value;
+            const comment = document.getElementById('comment').value;
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, brand, model, comment }),
+                });
+
+                if (response.ok) {
+                    fetchComments();
+                    this.reset();
+                }
+            } catch (error) {
+                console.error('Erro ao enviar comentário:', error);
+            }
+        });
+
+        // Carrega os comentários ao abrir a página
+        fetchComments();
+    </script>
+</body>
+</html>
